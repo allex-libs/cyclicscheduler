@@ -49,7 +49,7 @@ function perDayCyclicSchedulerCreator(execlib,CyclicScheduler){
     }
   };
 
-  PerDayCyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
+  PerDayCyclicScheduler.prototype.getNextMilestone = function(){
     var now = new Date(), next;
     var chosenHour = -1, chosenMinute = -1;
     var currHour = now.getHours(), currMinute = now.getMinutes();

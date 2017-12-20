@@ -15,7 +15,7 @@ function perYearCyclicSchedulerCreator(execlib,CyclicScheduler){
     CyclicScheduler.prototype.destroy.call(this);
   };
 
-  PerYearCyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
+  PerYearCyclicScheduler.prototype.getNextMilestone = function(){
   };
 
   return PerYearCyclicScheduler;

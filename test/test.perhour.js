@@ -5,7 +5,7 @@ function getMilestoneFromTicksPerHour(ticks_per_hour){
     klass : CyclicSchedulerFactory.klasses.PER_HOUR,
     ticks_per_hour : ticks_per_hour
   });
-  var ret = PerHourCyclicScheduler.getMillisUntilNextMilestone();
+  var ret = PerHourCyclicScheduler.getNextMilestone();
   PerHourCyclicScheduler.destroy();
   return ret;
 };
@@ -15,7 +15,7 @@ function getMilestoneFromMinutesInHour(minutes_in_hour){
     klass : CyclicSchedulerFactory.klasses.PER_HOUR,
     minutes_in_hour : minutes_in_hour
   });
-  var ret = PerHourCyclicScheduler.getMillisUntilNextMilestone();
+  var ret = PerHourCyclicScheduler.getNextMilestone();
   PerHourCyclicScheduler.destroy();
   return ret;
 };

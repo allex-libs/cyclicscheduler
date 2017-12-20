@@ -26,7 +26,7 @@ function ticksPerHourCyclicSchedulerCreator(execlib,PerHourCyclicScheduler){
     PerHourCyclicScheduler.prototype.destroy.call(this);
   };
 
-  TicksPerHourCyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
+  TicksPerHourCyclicScheduler.prototype.getNextMilestone = function(){
     var now = new Date();
     var nowMillis = now.getTime();
     var next = now.getTime() + this.millisecond_span;

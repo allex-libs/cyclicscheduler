@@ -69,8 +69,8 @@ function cyclicSchedulerCreator(execlib){
   };
 
   //abstract
-  CyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
-    throw new lib.Error('METHOD_NOT_IMPLEMENTED','getMillisUntilNextMilestone is not implemented in base class.');
+  CyclicScheduler.prototype.getNextMilestone = function(){
+    throw new lib.Error('METHOD_NOT_IMPLEMENTED','getNextMilestone is not implemented in base class.');
   };
 
   return CyclicScheduler;

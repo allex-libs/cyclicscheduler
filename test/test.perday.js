@@ -5,7 +5,7 @@ function getMilestoneFromPerDay(times){
     klass : CyclicSchedulerFactory.klasses.PER_DAY,
     times : times 
   });
-  return PerDayCyclicScheduler.getMillisUntilNextMilestone();
+  return PerDayCyclicScheduler.getNextMilestone();
 };
 
 describe('Basic [Sucess]',function(){

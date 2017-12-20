@@ -5,7 +5,7 @@ function getMilestoneFromPerWeek(times){
     klass : CyclicSchedulerFactory.klasses.PER_WEEK,
     times : times 
   });
-  return PerWeekCyclicScheduler.getMillisUntilNextMilestone();
+  return PerWeekCyclicScheduler.getNextMilestone();
 };
 
 describe('Basic [Sucess]',function(){

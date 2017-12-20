@@ -33,7 +33,7 @@ function minutesInHourCyclicSchedulerCreator(execlib,PerHourCyclicScheduler){
     PerHourCyclicScheduler.prototype.destroy.call(this);
   };
 
-  MinutesInHourCyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
+  MinutesInHourCyclicScheduler.prototype.getNextMilestone = function(){
     var now = new Date();
     var currMinutes = now.getMinutes();
     var chosenMinute = -1;

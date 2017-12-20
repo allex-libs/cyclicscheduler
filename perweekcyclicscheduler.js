@@ -60,7 +60,7 @@ function perWeekCyclicSchedulerCreator(execlib,CyclicScheduler){
     }
   };
 
-  PerWeekCyclicScheduler.prototype.getMillisUntilNextMilestone = function(){
+  PerWeekCyclicScheduler.prototype.getNextMilestone = function(){
     var now = new Date(), next;
     var chosenDay = -1, chosenHour = -1, chosenMinute = -1;
     var currDate = now.getDate(), currDay = now.getDay(), currHour = now.getHours(), currMinute = now.getMinutes();

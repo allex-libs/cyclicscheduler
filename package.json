@@ -1,0 +1,25 @@
+{
+  "name": "allex_cyclicschedulerlib",
+  "version": "1.0.0",
+  "description": "Lib containing cycle scheduling logic",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allex-libs/cyclicscheduler.git"
+  },
+  "dependencies": {
+    "moment": "latest"
+  },
+  "keywords": [
+    "ecosystem:AllexJS"
+  ],
+  "author": "HERS Belgrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allex-libs/cyclicscheduler/issues"
+  },
+  "homepage": "https://github.com/allex-libs/cyclicscheduler#readme"
+}

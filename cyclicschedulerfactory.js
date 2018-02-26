@@ -7,6 +7,8 @@ function cyclicSchedulerFactoryCreator(execlib){
   var PerWeekCyclicScheduler = require('./perweekcyclicscheduler.js')(execlib,CyclicScheduler);
   var PerMonthCyclicScheduler = require('./permonthcyclicscheduler.js')(execlib,CyclicScheduler);
   var PerYearCyclicScheduler = require('./peryearcyclicscheduler.js')(execlib,CyclicScheduler);
+  var AdaptiveScheduler = require('./adaptivescheduler.js')(execlib,CyclicScheduler);
+  var adaptive1_timespanDifferentials = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 15*1000, 30*1000, 60*1000, 120*1000, 300*1000, 600*1000, 900*1000, 1200*1000, 1800*1000,3600*1000, 2*3600*1000, 6*3600*1000, 24*3600*1000];
 
   function CyclicSchedulerFactory(){
     this.klasses = {
@@ -14,7 +16,8 @@ function cyclicSchedulerFactoryCreator(execlib){
       PER_DAY: 'PER_DAY',
       PER_WEEK: 'PER_WEEK',
       PER_MONTH: 'PER_MONTH',
-      PER_YEAR: 'PER_YEAR'
+      PER_YEAR: 'PER_YEAR',
+      ADAPTIVE_1: 'ADAPTIVE_1'
     };
   }
 
@@ -58,6 +61,10 @@ function cyclicSchedulerFactoryCreator(execlib){
         break;
       case this.klasses.PER_YEAR:
         return new PerYearCyclicScheduler(prophash);
+        break;
+      case this.klasses.ADAPTIVE_1:
+        prophash.timespanDifferentials = adaptive1_timespanDifferentials;
+        return new AdaptiveScheduler(prophash);
         break;
     }
   }
